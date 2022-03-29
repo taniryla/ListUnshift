@@ -1,4 +1,4 @@
-lass Node{
+class Node{
     constructor(val){
         this.val = val;
         this.next = null;
@@ -60,7 +60,7 @@ class SinglyLinkedList{
         this.head = newNode;
         this.length++;
         return this;
-        }
+    }
     get(index){
         if(index < 0 || index >= this.length) return null;
         var counter = 0;
@@ -71,17 +71,13 @@ class SinglyLinkedList{
         }
         return current;
     }
-    set(index, val) {
-        // use your get function to find the specific Node
-        var foundNOde = this.get(index);
-        // if the node is not found, return false
-        if (foundNode) {
+    set(index, val){
+        var foundNode = this.get(index);
+        if(foundNode){
             foundNode.val = val;
-            return true
-        } else {
-            return false;
+            return true;
         }
-        // if the node is found, set the the value of that node to be the value passed to the function and return true
+        return false;
     }
 }
 
@@ -92,6 +88,7 @@ list.push("GOODBYE")
 list.push("!") 
 list.push("<3")
 list.push(":)") 
+
 
 
  
